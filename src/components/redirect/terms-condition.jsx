@@ -1,8 +1,11 @@
 import React from "react";
+import { Manrope } from "next/font/google";
+
+const manrope = Manrope({ subsets: ["latin"] });
 
 const TermsAndConditions = () => {
   return (
-    <div style={styles.wrapper}>
+    <div className={manrope.className} style={styles.wrapper}>
       <div style={styles.container}>
         <h1 style={styles.title}>Terms and Conditions</h1>
         <p style={styles.paragraph}>Welcome to bot.ai!</p>
@@ -125,6 +128,7 @@ const TermsAndConditions = () => {
           infringes, otherwise violates, or advocates the infringement or other
           violation of, any third party rights.
         </p>
+
         <h2 style={styles.heading}>Disclaimer</h2>
         <p style={styles.paragraph}>
           To the maximum extent permitted by applicable law, we exclude all
@@ -177,7 +181,6 @@ const styles = {
     padding: "40px 20px",
   },
   container: {
-    fontFamily: "Arial, sans-serif",
     lineHeight: "1.6",
     color: "#333",
     maxWidth: "1150px",
