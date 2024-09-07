@@ -101,7 +101,7 @@ const EnterpriseTools = () => {
                   </div>
 
                   {/* <div className="hidden md:block absolute left-[21.67vw] top-[5.69vw] w-[0.14vw] h-[3.61vw] bg-gradient-to-b from-[#EDF5FC] via-[#C3E1F1] to-[#5755FF]"></div> */}
-                  <div className="absolute left-[21.67vw] top-[5.69vw] w-[0.14vw] h-[3.61vw] bg-gradient-to-b from-[#EDF5FC] via-[#C3E1F1] to-[#5755FF]"></div>
+                  <div className="absolute left-[21.67vw] top-[5.69vw] w-[0.14vw] h-[3.11vw] bg-gradient-to-b from-[#EDF5FC] via-[#C3E1F1] to-[#5755FF]"></div>
 
                   {/* Step 1 */}
                   <div className="ml-0 md:ml-[3.89vw] mb-4 md:mb-[1.11vw]">
@@ -129,7 +129,7 @@ const EnterpriseTools = () => {
                   </div>
 
                   {/* <div className="hidden md:block absolute left-[21.67vw] top-[15vw] w-[0.14vw] h-[3.06vw] bg-gradient-to-b from-[#EDF5FC] via-[#C3E1F1] to-[#5755FF]"></div> */}
-                  <div className="absolute left-[21.67vw] top-[15vw] w-[0.14vw] h-[3.06vw] bg-gradient-to-b from-[#EDF5FC] via-[#C3E1F1] to-[#5755FF]"></div>
+                  <div className="absolute left-[21.67vw] top-[14.87vw] w-[0.14vw] h-[2.46vw] bg-gradient-to-b from-[#EDF5FC] via-[#C3E1F1] to-[#5755FF]"></div>
 
                   {/* Step 2 */}
                   <div className="ml-0 md:ml-[1.11vw]">
