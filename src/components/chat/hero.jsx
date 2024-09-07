@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
 import Button from "../common/button";
-import { useRouter } from "next/navigation";
 
 const Hero = () => {
-  const router = useRouter();
   return (
     <section className="relative w-[100vw] overflow-hidden">
       <div className="relative w-full max-w-[100vw] mx-auto pt-16 sm:pt-[10vw] pb-8 sm:pb-[1.94vw] px-4 sm:px-[0.28vw]">
@@ -101,8 +99,9 @@ const Hero = () => {
                 variant="primary"
                 size="custom"
                 className="w-[128px] sm:w-[8.88vw] h-[40px] sm:h-[2.77vw] flex items-center justify-center !p-0"
+                onClick={() => window.open("https://app.bot9.ai/signup")}
               >
-                <span className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]" onClick={() => router.push("https://app.bot9.ai/signup")}>
+                <span className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]">
                   Get Started
                 </span>
               </Button>

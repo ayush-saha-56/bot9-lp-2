@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CircleFadingPlus, CircleCheck, ArrowRight } from "lucide-react";
 import Price from "../../../public/assets/pricing-image.svg";
 import { useRouter } from "next/navigation";
+import Button from "../common/button";
 
 const Middle = () => {
   const router = useRouter();
@@ -61,10 +62,17 @@ const Middle = () => {
                     Custom Data Retention
                   </li>
                 </ul>
-                <button className="bg-[#5755FF] text-white font-manrope text-base sm:text-[1.11vw] font-[600] py-3 sm:py-[0.83vw] px-4 sm:px-[1.11vw] rounded-md hover:bg-[#4644CC] transition-colors duration-300 mt-2 sm:mt-[0.5vw] w-full sm:w-[13.89vw] flex items-center justify-between" onClick={() => router.push("https://calendly.com/bot9")}>
-                  <span className="sm:-[1.61vw]">Get in touch</span>
-                  <ArrowRight className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw]" />
-                </button>
+                <Button
+                variant="primary"
+                size="custom"
+                className="w-full sm:w-[13.89vw] h-[3.47vw] flex items-center justify-between !p-0 px-[1.11vw]"
+                onClick={() => window.open("https://calendly.com/bot9")}
+              >
+                <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] ml-[1.11vw]">
+                  Get in touch
+                </span>
+                <ArrowRight className="w-[3.39vw] h-[1.39vw]"/>
+              </Button>
               </div>
               <div className="w-full sm:w-1/2 mt-8 sm:mt-0 flex items-center justify-center">
                 <div className="relative w-full h-64 sm:w-[31.72vw] sm:h-[28.83vw]">

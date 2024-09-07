@@ -2,10 +2,8 @@
 import React from "react";
 import Button from "../common/button";
 import { FolderSync, FolderHeart, CircleCheck, ArrowRight } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 const Hero = () => {
-  const router = useRouter();
   return (
     <section className="relative w-[100vw] overflow-hidden">
       <div className="relative w-full max-w-[100vw] mx-auto pt-16 sm:pt-[10vw] px-4 sm:px-[0.28vw]">
@@ -81,8 +79,9 @@ const Hero = () => {
                 variant="primary"
                 size="custom"
                 className="w-[128px] sm:w-[8.88vw] h-[40px] sm:h-[2.77vw] flex items-center justify-center !p-0"
+                onClick={() => window.open("https://app.bot9.ai/signup")}
               >
-                <span className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]" onClick={() => router.push("https://app.bot9.ai/signup")}>
+                <span className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]">
                   Build my Bot
                 </span>
               </Button>
@@ -147,12 +146,12 @@ const Hero = () => {
                 variant="primary"
                 size="custom"
                 className="w-full sm:w-[13.89vw] h-[3.47vw] flex items-center justify-between !p-0 px-[1.11vw]"
-                onClick={() => router.push("https://app.bot9.ai/signup")}
+                onClick={() => window.open("https://app.bot9.ai/signup")}
               >
-                <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] ml-[1.11vw]" onClick={() => router.push("https://app.bot9.ai/signup")}>
+                <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] ml-[1.11vw]">
                   Get Starter
                 </span>
-                <ArrowRight className="w-[3.39vw] h-[1.39vw]" onClick={() => router.push("https://app.bot9.ai/signup")}/>
+                <ArrowRight className="w-[3.39vw] h-[1.39vw]"/>
               </Button>
             </div>
 
@@ -228,11 +227,12 @@ const Hero = () => {
                 variant="primary"
                 size="custom"
                 className="w-full sm:w-[13.89vw] h-[3.47vw] flex items-center justify-between !p-0 px-[1.11vw]"
+                onClick={() => window.open("https://app.bot9.ai/signup")}
               >
-                <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] ml-[1.11vw]" onClick={() => router.push("https://app.bot9.ai/signup")}>
+                <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] ml-[1.11vw]">
                   Get Professional
                 </span>
-                <ArrowRight className="w-[3.39vw] h-[1.39vw]" onClick={() => router.push("https://app.bot9.ai/signup")}/>
+                <ArrowRight className="w-[3.39vw] h-[1.39vw]"/>
               </Button>
             </div>
           </div>

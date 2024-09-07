@@ -2,11 +2,9 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Button from "../common/button";
-import { useRouter } from "next/navigation";
 
 const Hero = () => {
   const [sliderPosition, setSliderPosition] = useState(0);
-  const router = useRouter();
   const images = [
     {
       src: "/assets/healthSlider.svg",
@@ -175,10 +173,10 @@ const Hero = () => {
                 variant="primary"
                 size="custom"
                 className="w-[10.88vw] h-[2.77vw] flex items-center justify-center !p-0"
+                onClick={() => window.open("https://app.bot9.ai/signup")}
               >
                 <span
                   className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] leading-[1.66vw]"
-                  onClick={() => router.push("https://app.bot9.ai/signup")}
                 >
                   Explore AI Agents
                 </span>
