@@ -2,11 +2,9 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Button from "../common/button";
 import { useSocket } from "@/context/socket-provider";
-import { useRouter } from "next/navigation";
 import { chatbotId, chatbotSlug, apiUrl } from "../../config";
 
 const Hero = () => {
-  const router = useRouter();
   const [messages, setMessages] = useState([
     {
       type: "bot",
@@ -285,11 +283,10 @@ const Hero = () => {
                 variant="primary"
                 size="custom"
                 className="w-full sm:w-[8.88vw] h-full sm:h-[2.77vw] flex items-center justify-center !p-0"
-                onClick={handleBuildBotClick}
+                onClick={() => window.open("https://app.bot9.ai/signup")}
               >
                 <span
                   className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]"
-                  onClick={() => router.push("https://app.bot9.ai/signup")}
                 >
                   Build my Bot
                 </span>

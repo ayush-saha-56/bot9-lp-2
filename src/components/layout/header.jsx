@@ -1,8 +1,7 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 // Assume these components are defined elsewhere
@@ -13,7 +12,6 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
 
   const links = [
     { name: 'Voice', href: '/voice' },
@@ -37,16 +35,8 @@ const Header = () => {
 
   const handleLinkClick = (href) => {
     setIsMobileMenuOpen(false);
-    router.push(href);
+    window.open(href);
   };
-
-  const loginClick = () =>{
-    router.push("https://app.bot9.ai/login");
-  }
-
-  const signClick = () =>{
-    router.push("https://calendly.com/bot9/30min");
-  }
 
   return (
     <header
@@ -69,7 +59,7 @@ const Header = () => {
             size="custom"
             className="flex items-center justify-center !p-0"
           >
-            <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[500] leading-[1.66vw]" onClick={loginClick}>
+            <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[500] leading-[1.66vw]" onClick={() => window.open("https://app.bot9.ai/login")}>
               Login
             </span>
           </Button>
@@ -80,7 +70,7 @@ const Header = () => {
             size="custom"
             className="w-[8.05vw] h-[2.22vw] flex items-center justify-center !p-0"
           >
-            <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[500] leading-[1.66vw]" onClick={() => router.push("https://calendly.com/bot9/30min")}>
+            <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[500] leading-[1.66vw]" onClick={() => window.open("https://calendly.com/bot9/30min")}>
               Book a Demo
             </span>
           </Button>
@@ -120,7 +110,7 @@ const Header = () => {
             ))}
             <li>
               <button
-                onClick={() => router.push("https://app.bot9.ai/login")}
+                onClick={() => window.open("https://app.bot9.ai/login")}
                 className="text-[3.5vw] leading-[5vw] w-full text-left py-2 text-gray-800 hover:text-[#5755FF]"
               >
                 Login
@@ -128,7 +118,7 @@ const Header = () => {
             </li>
             <li>
               <button
-                onClick={() => router.push("https://calendly.com/bot9/30min")}
+                onClick={() => window.open("https://calendly.com/bot9/30min")}
                 className="text-[3.5vw] leading-[5vw] w-full text-left py-2 text-gray-800 hover:text-[#5755FF]"
               >
                 Book a Demo

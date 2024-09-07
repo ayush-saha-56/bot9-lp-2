@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import Button from "../common/button";
+import { useRouter } from "next/navigation";
 
 const Pricing = () => {
+  const router = useRouter();
   return (
     <section className="py-12 md:py-[5.55vw] px-4 md:px-[1.11vw] bg-gradient-to-b from-white via-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Decorative elements - Only visible on desktop */}
@@ -55,7 +58,7 @@ const Pricing = () => {
                 per month
               </span>
             </div>
-            <Button variant="outline">View Pricing</Button>
+            <Button variant="outline" onClick={() => router.push("/pricing")} className="z-30">View Pricing</Button>
           </div>
 
           {/* Bottom right plus sign - Only visible on desktop */}

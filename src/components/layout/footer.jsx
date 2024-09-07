@@ -2,10 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 const Footer = () => {
-  const router = useRouter();
   return (
     <footer className="bg-gradient-to-t from-blue-100 to-white py-8 md:py-[4.44vw] px-4 md:px-[1.11vw] border-t border-gray-300 border-dashed">
       <div className="max-w-[1280px] md:max-w-[88.88vw] w-full md:w-[93.05vw] mx-auto">
@@ -64,29 +62,27 @@ const Footer = () => {
               <h3 className="font-semibold text-base md:text-[0.833vw] mb-4 md:mb-[1.11vw]">Resources</h3>
               <ul className="space-y-2 md:space-y-[0.55vw]">
                 <li><Link href="mailto:helpme@bot9.ai" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Contact us</Link></li>
-                <li onClick={() => router.push("https://bot9ai.apimatic.dev/v/1_0#/rest/introduction")}><span className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">API docs</span></li>
-                <li onClick={() => router.push("https://bot9.helpcenter.bot/")}><span className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Help center</span></li>
-                <li onClick={() => router.push("https://bot9.nolt.io/")}><span className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Roadmap</span></li>
+                <li><Link href="https://bot9ai.apimatic.dev/v/1_0#/rest/introduction" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">API docs</Link></li>
+                <li><Link href="https://bot9.helpcenter.bot/" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Help center</Link></li>
+                <li><Link href="https://bot9.nolt.io/" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Roadmap</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold text-base md:text-[0.833vw] mb-4 md:mb-[1.11vw]">Other</h3>
               <ul className="space-y-2 md:space-y-[0.55vw]">
-                <li onClick={() => router.push("https://bot9.ai/privacy-policy")}><Link href="#" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Privacy policy</Link></li>
-                <li onClick={() => router.push("https://bot9.ai/terms")}><Link href="#" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Terms & Conditions</Link></li>
+                <li><Link href="/privacy-policy" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Privacy policy</Link></li>
+                <li><Link href="/terms" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF]">Terms & Conditions</Link></li>
               </ul>
               <h3 className="font-semibold text-base md:text-[0.833vw] mt-8 md:mt-[2.22vw] mb-4 md:mb-[1.11vw]">Social</h3>
-              <ul className="space-y-2 md:space-y-[0.55vw]">
-                <li onClick={() => router.push("https://in.linkedin.com/company/dukaan")}>
-                  <Link href="#" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF] flex items-center">
-                    <Image src="/assets/linkedin.svg" alt="LinkedIn" width={20} height={20} className="w-5 h-5 md:w-[1.66vw] md:h-[1.66vw] mr-2 md:mr-[0.55vw]" />
-                    LinkedIn
+              <ul className="space-x-2 md:space-x-[0.55vw] flex">
+                <li>
+                  <Link href="https://in.linkedin.com/company/dukaan" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF] flex items-center">
+                    <Image src="/assets/linkedin.svg" alt="LinkedIn" width={20} height={20} className="w-5 h-5 md:w-[1.38vw] md:h-[1.38vw] mr-2 md:mr-[0.55vw]" />
                   </Link>
                 </li>
-                <li onClick={() => router.push("https://x.com/bot9_")}>
-                  <Link href="#" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF] flex items-center">
-                    <Image src="/assets/twitter.svg" alt="X (formerly Twitter)" width={20} height={20} className="w-5 h-5 md:w-[1.66vw] md:h-[1.66vw] mr-2 md:mr-[0.55vw]" />
-                    X (formerly Twitter)
+                <li>
+                  <Link href="https://x.com/bot9_" className="text-gray-600 text-sm md:text-[0.972vw] hover:text-[#5755FF] flex items-center">
+                    <Image src="/assets/twitter.svg" alt="X (formerly Twitter)" width={20} height={20} className="w-5 h-5 md:w-[1.38vw] md:h-[1.38vw] mr-2 md:mr-[0.55vw]" />
                   </Link>
                 </li>
               </ul>

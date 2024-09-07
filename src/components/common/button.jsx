@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ children, variant, size = "default", className = "" }) => {
+const Button = ({ children, variant, size = "default", className = "", onClick }) => {
   const baseClasses = "font-medium rounded-md sm:rounded-[0.416vw] transition-colors duration-200";
   const variantClasses = {
     text: "text-[#667185] hover:text-[#5755FF]",
@@ -16,6 +16,7 @@ const Button = ({ children, variant, size = "default", className = "" }) => {
   return (
     <button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      onClick={onClick} // Allow passing onClick here
     >
       {children}
     </button>
