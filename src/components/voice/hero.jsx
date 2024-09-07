@@ -2,7 +2,7 @@
 import React from "react";
 import Button from "../common/button";
 import Image from "next/image";
-import VoiceAnimationSVG from "../../../public/assets/voice.svg"; 
+import VoiceAnimationSVG from "../../../public/assets/voice.svg";
 
 const Hero = () => {
   return (
@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="absolute w-[0.07vw] h-[8.96vw] left-[calc(50%-21.81vw)] top-[28.89vw] bg-gradient-to-b from-[#F7F8FA] to-[#E4E7EC]"></div>
           <div className="absolute w-[0.07vw] h-[22.43vw] right-[calc(50%-39.17vw)] top-[15.35vw] bg-gradient-to-b from-[#F7F8FA] to-[#E4E7EC]"></div>
           {/* Corner Elements */}
-          <div className="absolute w-[1.66vw] h-[1.66vw] left-[14.1vw] top-[37.08vw] z-10">
+          <div className="absolute w-[1.66vw] h-[1.66vw] left-[13.58vw] top-[37.08vw] z-10">
             <div className="absolute w-[0.138vw] h-[1.66vw] left-[0.743vw] bg-gray-400" />
             <div className="absolute w-[1.66vw] h-[0.138vw] top-[0.743vw] bg-gray-400" />
           </div>
@@ -99,7 +99,7 @@ const Hero = () => {
 
           {/* Voice animation - Only visible on desktop */}
           <div className="hidden sm:block mt-[10.42vw]">
-            <div className="bg-white rounded-none w-[62.5vw] h-[34.17vw] relative z-10 p-[1.67vw]">
+            <div className="bg-white rounded-none w-[61.98vw] h-[34.17vw] relative z-10 p-[1.67vw] right-[0.26vw]">
               <div className="relative z-10 flex items-center justify-center w-full h-full">
                 <Image
                   src={VoiceAnimationSVG}

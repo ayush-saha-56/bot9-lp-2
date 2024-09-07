@@ -46,7 +46,7 @@ const VoiceAgentsComponent = () => {
           <div className="absolute w-screen h-[0.07vw] left-1/2 -translate-x-1/2 bottom-[4.35vw] border-t border-[#D0D5DD]"></div>
 
           {/* Corner element */}
-          <div className="absolute w-[1.66vw] h-[1.66vw] left-[10.19vw] top-[57.73vw] z-30">
+          <div className="absolute w-[1.66vw] h-[1.66vw] left-[10.19vw] top-[56.62vw] z-30">
             <div className="absolute w-[0.138vw] h-[1.66vw] left-[0.763vw] top-0 bg-gray-400"></div>
             <div className="absolute w-[1.66vw] h-[0.138vw] left-0 top-[0.763vw] bg-gray-400"></div>
           </div>
