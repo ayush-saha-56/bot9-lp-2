@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import {useRouter} from "next/navigation";
 
 // Assume these components are defined elsewhere
 import Logo from '../common/logo';
@@ -12,6 +13,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   const links = [
     { name: 'Voice', href: '/voice' },
@@ -35,7 +37,7 @@ const Header = () => {
 
   const handleLinkClick = (href) => {
     setIsMobileMenuOpen(false);
-    window.open(href);
+    router.push(href);
   };
 
   return (
