@@ -1,0 +1,87 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.bg-gradient-blur {
+  background: linear-gradient(89.79deg, #5755FF 0.3%, #33BBC5 79.47%);
+  filter: blur(90px);
+}
+
+.hero-title {
+  font-size: 56px;
+  line-height: 72px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.bot-assistant-card {
+  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+}
+
+.hero-section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+}
+
+/* Scaling for larger screens */
+@media (min-width: 1441px) {
+  .hero-container,
+  .collaborate-container,
+  .onboarding-container,
+  .connect-data-container,
+  .enterprise-tools-container,
+  .header-container {
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top center;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1440px) {
+  .hero-container,
+  .collaborate-container,
+  .onboarding-container,
+  .connect-data-container,
+  .enterprise-tools-container,
+  .header-container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-title {
+    font-size: calc(32px + (56 - 32) * ((100vw - 320px) / (1440 - 320)));
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1440 - 320)));
+    line-height: 1.5;
+  }
+
+  .bot-assistant-card {
+    width: 90%;
+    max-width: 900px;
+  }
+
+  .chat-input {
+    width: 90%;
+    max-width: 820px;
+  }
+}
