@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
         <div className="hidden md:block absolute inset-0 w-full h-full pointer-events-none">
           {/* Horizontal lines */}
           <div className="absolute w-screen h-[0.07vw] left-1/2 -translate-x-1/2 top-[13.80vw] border-t border-[#D0D5DD]"></div>
-          <div className="absolute w-screen h-[0.07vw] left-1/2 -translate-x-1/2 bottom-[4.38vw] border-t border-[#D0D5DD]"></div>
+          <div className="absolute w-screen h-[0.07vw] left-1/2 -translate-x-1/2 bottom-[4.35vw] border-t border-[#D0D5DD]"></div>
           <div className="absolute w-[0.15vw] h-[0.9vw] left-[10.89vw] top-[-0.138vw] bg-[#98A2B3] z-40"></div>
         </div>
 
