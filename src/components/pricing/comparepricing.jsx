@@ -1,24 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CircleCheck } from "lucide-react";
-import Button from "../common/button";
 
 const PricingComparison = () => {
   const [selectedPlan, setSelectedPlan] = useState("starter");
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      setIsSticky(offset > 100);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const features = [
     {
@@ -67,12 +52,35 @@ const PricingComparison = () => {
       category: "Contacts",
       items: [
         { name: "Storage", starter: "5,000", professional: "50,000" },
-        {
-          name: "Create custom attributes",
-          starter: "Unlimited",
-          professional: "Unlimited",
-        },
+        { name: "Create custom attributes", starter: "Unlimited", professional: "Unlimited" },
         { name: "Export Contacts", starter: true, professional: true },
+      ],
+    },
+    {
+      category: "Shared Inbox",
+      items: [
+        { name: "History", starter: "Unlimited", professional: "Unlimited" },
+      ],
+    },
+    {
+      category: "Analytics and Reporting",
+      items: [
+        { name: "Conversation volume report", starter: true, professional: true },
+        { name: "CSV export", starter: true, professional: true },
+      ],
+    },
+    {
+      category: "API Access",
+      items: [
+        { name: "API access", starter: false, professional: true },
+        { name: "Rate limit", starter: true, professional: false },
+      ],
+    },
+    {
+      category: "Help and Support",
+      items: [
+        { name: "Email & live chat support", starter: true, professional: true },
+        { name: "Account manager", starter: false, professional: false },
       ],
     },
   ];
@@ -91,65 +99,48 @@ const PricingComparison = () => {
   );
 
   return (
-    <section className="relative w-[100vw] overflow-hidden bg-[#F5F5FF] border-t border-gray-300 border-dashed">
-      <div className="relative w-full max-w-[100vw] mx-auto py-16 sm:pt-[4.44vw] sm:pb-[4.44vw] px-4 sm:px-[0.28vw]">
-        <h1 className="font-manrope text-3xl sm:text-[2.78vw] font-[500] leading-tight sm:leading-[3.89vw] text-gray-900 mb-2 sm:mb-[0.14vw] text-center">
+    <section className="relative w-full overflow-hidden bg-[#F5F5FF] border-t border-gray-300 border-dashed">
+      <div className="relative w-full max-w-[100vw] mx-auto py-8 sm:py-[4.44vw] px-4 sm:px-[0.28vw]">
+        <h1 className="font-manrope text-2xl sm:text-[2.78vw] font-[500] leading-tight sm:leading-[3.89vw] text-gray-900 mb-2 sm:mb-[0.14vw] text-center">
           Compare our Pricing
         </h1>
-        <p className="font-manrope text-lg sm:text-[1.39vw] font-[400] leading-relaxed sm:leading-[2.08vw] text-[#667185] mb-8 sm:mb-[3.33vw] text-center">
+        <p className="font-manrope text-base sm:text-[1.39vw] font-[400] leading-relaxed sm:leading-[2.08vw] text-[#667185] mb-6 sm:mb-[3.33vw] text-center">
           to see what works best for you
         </p>
 
-        <div className="w-full max-w-full sm:max-w-[78.19vw] bg-white p-6 sm:p-[2.22vw] border border-gray-200 relative z-10 mx-auto">
-          {/* Mobile Plan Selection */}
-          <div
-            className={`sm:hidden ${
-              isSticky
-                ? "fixed top-0 left-0 right-0 bg-white z-50 shadow-md"
-                : ""
-            }`}
-          >
-            <div className="flex justify-between p-4">
-              <Button
-                variant={selectedPlan === "starter" ? "primary" : "secondary"}
-                size="custom"
-                className="w-[45%] h-[2.77vw] flex items-center justify-center !p-0"
+        {/* Mobile Plan Selection - Separate, joined div */}
+        <div className="sm:hidden mb-6">
+          <div className="flex justify-center">
+            <div className="inline-flex rounded-md" role="group">
+              <button
+                type="button"
+                className={`px-4 py-2 text-sm font-medium ${selectedPlan === "starter"
+                    ? "text-white bg-[#5755FF]"
+                    : "text-black bg-white hover:bg-gray-100"
+                  } border border-gray-200 rounded-l-lg border-r-0`}
                 onClick={() => setSelectedPlan("starter")}
               >
-                <span className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]">
-                  Starter
-                </span>
-              </Button>
-              <Button
-                variant={
-                  selectedPlan === "professional" ? "primary" : "secondary"
-                }
-                size="custom"
-                className="w-[45%] h-[2.77vw] flex items-center justify-center !p-0"
+                Starter
+              </button>
+              <button
+                type="button"
+                className={`px-4 py-2 text-sm font-medium ${selectedPlan === "professional"
+                    ? "text-white bg-[#5755FF]"
+                    : "text-black bg-white hover:bg-gray-100"
+                  } border border-gray-200 rounded-r-lg`}
                 onClick={() => setSelectedPlan("professional")}
               >
-                <span className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]">
-                  Professional
-                </span>
-              </Button>
+                Professional
+              </button>
             </div>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-x-[3.19vw] relative">
-            {/* Initial vertical dividers */}
-            <VerticalDivider
-              className="left-1/3 -ml-[0.035vw]"
-              height="calc(100% - 3.4vw)"
-              top="0"
-            />
-            <VerticalDivider
-              className="right-1/3 -mr-[0.035vw]"
-              height="calc(100% - 3.4vw)"
-              top="0"
-            />
 
-            {/* Headers */}
-            <div>
+        <div className="w-full max-w-full sm:max-w-[78.19vw] bg-white p-4 sm:p-[2.22vw] border border-gray-200 relative z-10 mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 sm:gap-x-[3.19vw] gap-y-2 sm:gap-y-4 relative">
+            {/* Desktop Headers - Hidden on mobile */}
+            <div className="hidden sm:block">
               <h3 className="font-manrope text-xl sm:text-[1.39vw] font-[600] leading-tight sm:leading-[2.08vw] text-left mb-6 sm:mb-[1.67vw]">
                 Features, Support & Integrations
               </h3>
@@ -168,69 +159,64 @@ const PricingComparison = () => {
               <HorizontalDivider className="mb-6 sm:mb-[1.67vw]" />
             </div>
 
+            {/* Vertical dividers - Only visible on desktop */}
+            <VerticalDivider
+              className="left-1/3 -ml-[0.035vw] my-auto"
+              height="calc(100% - 0.5vw)"
+              top="0"
+            />
+            <VerticalDivider
+              className="right-1/3 -mr-[0.035vw] my-auto"
+              height="calc(100% - 0.5vw)"
+              top="0"
+            />
+
             {features.map((feature, index) => (
               <React.Fragment key={index}>
-                <div className="col-span-1 sm:col-span-3 mt-8 sm:mt-[2.22vw]">
+                <div className="col-span-2 sm:col-span-3 mt-6 sm:mt-[2.22vw]">
                   {index > 0 && (
-                    <HorizontalDivider className="mb-6 sm:mb-[1.67vw]" />
+                    <HorizontalDivider className="hidden sm:block mb-4 sm:mb-[1.67vw]" />
                   )}
-                  <h4 className="font-manrope text-lg sm:text-[1.25vw] font-[600] leading-tight sm:leading-[1.87vw] text-left mb-4 sm:mb-[1.11vw]">
+                  <h4 className="font-manrope text-lg sm:text-[1.25vw] font-[600] leading-tight sm:leading-[1.87vw] text-left mb-3 sm:mb-[1.11vw]">
                     {feature.category}
                   </h4>
                 </div>
                 {feature.items.map((item, itemIndex) => (
                   <React.Fragment key={itemIndex}>
-                    <div className="font-manrope text-base sm:text-[1.11vw] font-[400] leading-relaxed sm:leading-[1.67vw] text-left text-[#667185] py-2 sm:py-[0.56vw]">
+                    <div className="font-manrope text-sm sm:text-[1.11vw] font-[400] leading-relaxed sm:leading-[1.67vw] text-left text-[#667185] py-2 sm:py-[0.56vw]">
                       {item.name}
                     </div>
-                    <div
-                      className={`font-manrope text-base sm:text-[1.11vw] font-[400] leading-relaxed sm:leading-[1.67vw] text-left text-[#667185] py-2 sm:py-[0.56vw] ${
-                        selectedPlan === "professional" ? "hidden sm:block" : ""
-                      }`}
-                    >
-                      {typeof item.starter === "boolean" ? (
-                        item.starter ? (
+                    <div className="font-manrope px-3 sm:px-0 text-sm sm:text-[1.11vw] font-[400] leading-[20px] sm:leading-[1.67vw] text-right sm:text-left text-[#667185] py-2 sm:py-[0.56vw]">
+                      {typeof item[selectedPlan] === "boolean" ? (
+                        item[selectedPlan] ? (
                           <CircleCheck
-                            className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A]"
+                            className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] inline-block sm:block ml-auto sm:ml-0"
                             strokeWidth={1.5}
                           />
-                        ) : null
+                        ) : (
+                          <span className="sm:hidden">-</span>
+                        )
                       ) : (
-                        item.starter
+                        item[selectedPlan]
                       )}
                     </div>
-                    <div
-                      className={`font-manrope text-base sm:text-[1.11vw] font-[400] leading-relaxed sm:leading-[1.67vw] text-left text-[#667185] py-2 sm:py-[0.56vw] ${
-                        selectedPlan === "starter" ? "hidden sm:block" : ""
-                      }`}
-                    >
-                      {typeof item.professional === "boolean" ? (
-                        item.professional ? (
+                    {/* Hidden column for desktop view */}
+                    <div className="hidden sm:block font-manrope text-sm sm:text-[1.11vw] font-[400] leading-relaxed sm:leading-[1.67vw] text-left text-[#667185] py-2 sm:py-[0.56vw]">
+                      {typeof item[selectedPlan === "starter" ? "professional" : "starter"] === "boolean" ? (
+                        item[selectedPlan === "starter" ? "professional" : "starter"] ? (
                           <CircleCheck
                             className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A]"
                             strokeWidth={1.5}
                           />
                         ) : null
                       ) : (
-                        item.professional
+                        item[selectedPlan === "starter" ? "professional" : "starter"]
                       )}
                     </div>
                   </React.Fragment>
                 ))}
               </React.Fragment>
             ))}
-
-            {/* Continuous vertical dividers */}
-            <VerticalDivider
-              className="left-1/3 -ml-[0.035vw]"
-              height="calc(100% - 3.4vw - 19.44vw)"
-              top="19.44vw"
-            />
-            <VerticalDivider
-              className="right-1/3 -mr-[0.035vw]"
-              height="calc(100% - 3.4vw - 19.44vw)"
-              top="19.44vw"
-            />
           </div>
         </div>
       </div>

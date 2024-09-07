@@ -282,11 +282,11 @@ const Hero = () => {
               <Button
                 variant="primary"
                 size="custom"
-                className="w-full sm:w-[8.88vw] h-full sm:h-[2.77vw] flex items-center justify-center !p-0"
-                onClick={() => window.open("https://app.bot9.ai/signup")}
+                className="w-[128px] sm:w-[8.88vw] h-[40px] sm:h-[2.77vw] flex items-center justify-center !p-0"
               >
                 <span
                   className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]"
+                  onClick={() => window.open("https://app.bot9.ai/signup")}
                 >
                   Build my Bot
                 </span>

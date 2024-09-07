@@ -18,8 +18,8 @@ const Middle = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-full sm:max-w-[78.51vw] mx-auto mb-[10.83vw]">
-          <div className="w-full bg-white p-6 sm:p-[2.22vw] border border-gray-200 relative z-20">
+        <div className="relative z-10 max-w-full sm:max-w-[78.51vw] mx-auto sm:mx-[9.98vw] mb-[10.83vw]">
+          <div className="w-full bg-white p-6 sm:p-[2.22vw] border-t border-b sm:border border-gray-200 relative z-20">
             {/* Enterprise Section */}
             <div className="flex flex-col sm:flex-row sm:h-[27vw]">
               <div className="w-full sm:w-1/2 sm:pr-[2.22vw]">
@@ -62,17 +62,17 @@ const Middle = () => {
                     Custom Data Retention
                   </li>
                 </ul>
-                <Button
-                variant="primary"
-                size="custom"
-                className="w-full sm:w-[13.89vw] h-[3.47vw] flex items-center justify-between !p-0 px-[1.11vw]"
-                onClick={() => window.open("https://calendly.com/bot9")}
-              >
-                <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] ml-[1.11vw]">
-                  Get in touch
-                </span>
-                <ArrowRight className="w-[3.39vw] h-[1.39vw]"/>
-              </Button>
+              <Button
+              variant="primary"
+              size="custom"
+              className="w-1/2 sm:w-[13.89vw] h-12 sm:h-[3.47vw] flex items-center justify-between !p-0 px-4 sm:px-[1.11vw]"
+              onClick={() => window.open("https://calendly.com/bot9")}
+            >
+              <span className="whitespace-nowrap font-manrope text-sm sm:text-[1.11vw] font-[600] ml-2 sm:ml-[1.11vw]">
+              Get in touch
+              </span>
+              <ArrowRight className="w-4 h-4 sm:w-[1.39vw] sm:h-[1.39vw] mr-[0.5rem] sm:mr-[0.8vw]"/>
+            </Button>
               </div>
               <div className="w-full sm:w-1/2 mt-8 sm:mt-0 flex items-center justify-center">
                 <div className="relative w-full h-64 sm:w-[31.72vw] sm:h-[28.83vw]">
