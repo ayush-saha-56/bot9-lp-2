@@ -260,21 +260,24 @@ const Hero = () => {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center">
           <h1 className="font-manrope text-4xl sm:text-[3.89vw] font-[500] leading-tight sm:leading-[5vw] text-[#101828] mb-4 sm:mb-[1.67vw] max-w-full sm:max-w-[52.08vw] text-center">
-            Automate your{" "}
-            <span className="sm:hidden">Customer Support & Sales</span>
+            <span className="text-[#5755FF]">AI driven Chatbot</span> for
+            <span className="sm:hidden"> Customer Support & Sales</span>
             <span className="hidden sm:inline">
               <br />
               Customer Support & Sales
             </span>
           </h1>
           <p className="font-manrope text-lg sm:text-[1.39vw] font-[400] leading-relaxed sm:leading-[2.08vw] text-[#667185] mb-6 sm:mb-[2.22vw] max-w-full sm:max-w-[52.08vw] text-center">
-            Train a secure AI on your technical resources that answers customer{" "}
+            Empower your customers with an AI powered chatbot that handles
             <span className="sm:hidden">
-              questions so your team doesn&apos;t have to.
+              {" "}
+              their queries seamlessly, so you can focus on growing your
+              business.
             </span>
             <span className="hidden sm:inline">
               <br />
-              questions so your team doesn&apos;t have to.
+              their queries seamlessly, so you can focus on growing your
+              business.
             </span>
           </p>
           <div className="flex justify-center items-center w-full sm:w-auto">
@@ -282,11 +285,13 @@ const Hero = () => {
               <Button
                 variant="primary"
                 size="custom"
-                className="w-full sm:w-[8.88vw] h-full sm:h-[2.77vw] flex items-center justify-center !p-0"
-                onClick={() => window.open("https://app.bot9.ai/signup")}
+                className="w-[128px] sm:w-[8.88vw] h-[40px] sm:h-[2.77vw] flex items-center justify-center !p-0"
               >
-                <span className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]">
-                  Build my Bot
+                <span
+                  className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]"
+                  onClick={() => window.open("https://app.bot9.ai/signup")}
+                >
+                  Get Started
                 </span>
               </Button>
             </div>
