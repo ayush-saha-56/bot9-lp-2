@@ -115,9 +115,9 @@ const Hero = () => {
           <div className="absolute w-screen h-[0.07vw] left-1/2 -translate-x-1/2 top-[42.01vw] border-t border-[#D0D5DD]"></div>
 
           {/* Vertical Lines */}
-          <div className="absolute w-[0.07vw] h-full left-[calc(50%-35.14vw)] top-0 border-r border-dashed border-[#D0D5DD]"></div>
-          <div className="absolute w-[0.07vw] h-full left-[calc(50%-31.32vw)] top-0 border-r border border-[#E5E7EB]"></div>
-          <div className="absolute w-[0.07vw] h-full right-[calc(50%-35.14vw)] top-0 border-r border-dashed border-[#D0D5DD]"></div>
+          <div className="absolute w-[0.07vw] h-full left-[calc(50%-34.74vw)] top-0 border-r border-dashed border-[#D0D5DD]"></div>
+          <div className="absolute w-[0.07vw] h-full left-[calc(50%-30.92vw)] top-0 border-r  border-[#E5E7EB]"></div>
+          <div className="absolute w-[0.07vw] h-full right-[calc(50%-35.54vw)] top-0 border-r border-dashed border-[#D0D5DD]"></div>
 
           {/* Additional Vertical Lines */}
           <div
