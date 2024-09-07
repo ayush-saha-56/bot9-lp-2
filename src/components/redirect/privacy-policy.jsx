@@ -1,8 +1,11 @@
 import React from "react";
+import { Manrope } from "next/font/google";
+
+const manrope = Manrope({ subsets: ["latin"] });
 
 const PrivacyPolicy = () => {
   return (
-    <div style={styles.wrapper}>
+    <div className={manrope.className} style={styles.wrapper}>
       <div style={styles.container}>
         <h1 style={styles.title}>Privacy Policy</h1>
         <p style={styles.paragraph}>
@@ -49,6 +52,7 @@ const PrivacyPolicy = () => {
           information, including items such as name, company name, address,
           email address, and telephone number.
         </p>
+
         <h2 style={styles.heading}>How we use your information</h2>
         <p style={styles.paragraph}>
           We use the information we collect in various ways, including to:
@@ -100,7 +104,7 @@ const PrivacyPolicy = () => {
           content based on visitors' browser type and/or other information.
         </p>
 
-        <h2 style={styles.heading}>Advertising Partners Privacy Policies </h2>
+        <h2 style={styles.heading}>Advertising Partners Privacy Policies</h2>
         <p style={styles.paragraph}>
           You may consult this list to find the Privacy Policy for each of the
           advertising partners of bot.ai.
@@ -190,7 +194,6 @@ const PrivacyPolicy = () => {
         </p>
 
         <h2 style={styles.heading}>Children's Information</h2>
-
         <p style={styles.paragraph}>
           Another part of our priority is adding protection for children while
           using the internet. We encourage parents and guardians to observe,
@@ -205,7 +208,6 @@ const PrivacyPolicy = () => {
         </p>
 
         <h2 style={styles.heading}>Changes to This Privacy Policy</h2>
-
         <p style={styles.paragraph}>
           We may update our Privacy Policy from time to time. Thus, we advise
           you to review this page periodically for any changes. We will notify
@@ -234,7 +236,6 @@ const styles = {
     padding: "40px 20px",
   },
   container: {
-    fontFamily: "Arial, sans-serif",
     lineHeight: "1.6",
     color: "#333",
     maxWidth: "1150px",
@@ -242,8 +243,6 @@ const styles = {
     padding: "40px",
     backgroundColor: "#ffffff",
     marginTop: "60px",
-    // Removed boxShadow
-    // Removed borderRadius
   },
   title: {
     fontSize: "24px",
