@@ -18,8 +18,8 @@ const Header = () => {
   const links = [
     { name: 'Voice', href: '/voice' },
     { name: 'Chat', href: '/chat' },
-    { name: 'Pricing', href: '/pricing' },
     { name: 'AI Agent', href: '/ai-agent' },
+    { name: 'Pricing', href: '/pricing' },
   ];
 
   useEffect(() => {
