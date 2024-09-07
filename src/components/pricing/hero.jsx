@@ -5,7 +5,7 @@ import { FolderSync, FolderHeart, CircleCheck, ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative w-[100vw] overflow-hidden">
+    <section className="relative w-full overflow-hidden">
       <div className="relative w-full max-w-[100vw] mx-auto pt-16 sm:pt-[10vw] px-4 sm:px-[0.28vw]">
         {/* Decorative elements - Only visible on desktop */}
         <div className="hidden sm:block">
@@ -73,176 +73,185 @@ const Hero = () => {
             Train a secure AI on your technical resources that answers customer
             questions so your team doesn&apos;t have to.
           </p>
-          <div className="flex justify-center items-center w-full sm:w-auto mb-[5.56vw]">
+          <div className="flex justify-center items-center w-full sm:w-auto mb-8 sm:mb-[5.56vw]">
+            <div className="flex justify-center items-center w-full sm:w-auto">
             <div className="w-full sm:w-[10.4vw] h-12 sm:h-[3.3vw] flex items-center justify-center mb-1 sm:mb-[0.3vw]">
               <Button
                 variant="primary"
                 size="custom"
-                className="w-[128px] sm:w-[8.88vw] h-[40px] sm:h-[2.77vw] flex items-center justify-center !p-0"
-                onClick={() => window.open("https://app.bot9.ai/signup")}
+                className="w-[135px] sm:w-[10vw] h-[40px] sm:h-[2.77vw] flex items-center justify-center !p-0"
               >
-                <span className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]">
+                <span
+                  className="whitespace-nowrap font-manrope text-base sm:text-[1.11vw] font-[600] leading-[1.66vw]"
+                  onClick={() => window.open("https://app.bot9.ai/signup")}
+                >
                   Build my Bot
                 </span>
               </Button>
             </div>
           </div>
+          </div>
 
           {/* Pricing content */}
-          <div className="bg-white rounded-none w-[78.4vw] h-auto relative z-10 p-[1.67vw] flex mt-[4.86vw]">
+          <div className="bg-white rounded-none w-full sm:w-[78.4vw] h-auto relative z-10 p-4 sm:p-[1.67vw] flex flex-col sm:flex-row mt-8 sm:mt-[4.86vw]">
             {/* Starter Plan */}
-            <div className="flex-1 pr-[1.67vw] border-r border-gray-200">
-              <div className="flex items-center mb-[1.11vw]">
-                <div className="mr-[1vw] p-[0.14vw] bg-[#F5F5FF] rounded-md border border-[#D9D8FD] w-[1.81vw] h-[1.81vw] flex items-center justify-center">
+            <div className="flex-1 sm:pr-[1.67vw] border-b sm:border-b-0 sm:border-r border-gray-200 pb-8 sm:pb-0 mb-8 sm:mb-0">
+              <div className="flex items-center mb-4 sm:mb-[1.11vw]">
+                <div className="mr-3 sm:mr-[1vw] p-1 sm:p-[0.14vw] bg-[#F5F5FF] rounded-md border border-[#D9D8FD] w-8 h-8 sm:w-[1.81vw] sm:h-[1.81vw] flex items-center justify-center">
                   <FolderSync
-                    className="w-[1.11vw] h-[1.11vw]"
+                    className="w-5 h-5 sm:w-[1.11vw] sm:h-[1.11vw]"
                     color="#5755FF"
                     strokeWidth={1.5}
                   />
                 </div>
-                <h3 className="font-manrope text-[1.67vw] font-[500] text-[#101928]">
+                <h3 className="font-manrope text-2xl sm:text-[1.67vw] font-[500] text-[#101928]">
                   Starter
                 </h3>
               </div>
-              <div className="w-full h-[0.07vw] border-t border-dashed border-gray-200 mb-[1.11vw]"></div>
-              <p className="font-manrope text-[2.22vw] font-[600] text-[#101928] mb-[0.83vw]">
+              <div className="w-full h-[1px] sm:h-[0.07vw] border-t border-dashed border-gray-200 mb-4 sm:mb-[1.11vw]"></div>
+              <p className="font-manrope text-3xl sm:text-[2.22vw] font-[600] text-[#101928] mb-2 sm:mb-[0.83vw]">
                 $199/month
               </p>
-              <p className="font-manrope text-[1.11vw] text-[#667185] mb-[3.33vw]">
+              <p className="font-manrope text-base sm:text-[1.11vw] text-[#667185] mb-6 sm:mb-[3.33vw]">
                 Ideal for startups and small businesses craving essential chat
                 automation.
               </p>
-              <ul className="space-y-[2.55vw] mb-[11.11vw]">
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+              <ul className="space-y-4 sm:space-y-[2.55vw] mb-6 sm:mb-[11.11vw]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   Upto 500 Support Responses per month
                 </li>
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   5,000 contacts storage
                 </li>
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   5 custom instructions
                 </li>
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   1 AI Chatbot
                 </li>
               </ul>
               <Button
-                variant="primary"
-                size="custom"
-                className="w-full sm:w-[13.89vw] h-[3.47vw] flex items-center justify-between !p-0 px-[1.11vw]"
-                onClick={() => window.open("https://app.bot9.ai/signup")}
-              >
-                <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] ml-[1.11vw]">
-                  Get Starter
-                </span>
-                <ArrowRight className="w-[3.39vw] h-[1.39vw]"/>
-              </Button>
+              variant="primary"
+              size="custom"
+              className="w-1/2 sm:w-[13.89vw] h-12 sm:h-[3.47vw] flex items-center justify-between !p-0 px-4 sm:px-[1.11vw]"
+              onClick={() => window.open("https://app.bot9.ai/signup")}
+            >
+              <span className="whitespace-nowrap font-manrope text-sm sm:text-[1.11vw] font-[600] ml-2 sm:ml-[1.11vw]">
+                Get Starter
+              </span>
+              {/* <ArrowRight className="w-4 h-4 sm:w-[3.39vw] sm:h-[1.39vw]"/> */}
+              <ArrowRight className="w-4 h-4 sm:w-[1.39vw] sm:h-[1.39vw] mr-[0.5rem] sm:mr-[0.8vw]"/>
+            </Button>
             </div>
 
             {/* Professional Plan */}
-            <div className="flex-1 pl-[1.67vw]">
-              <div className="flex items-center mb-[1.11vw]">
-                <div className="mr-[1vw] p-[0.14vw] bg-[#F5F5FF] rounded-md border border-[#D9D8FD] w-[1.81vw] h-[1.81vw] flex items-center justify-center">
+            <div className="flex-1 sm:pl-[1.67vw]">
+              <div className="flex items-center mb-4 sm:mb-[1.11vw]">
+                <div className="mr-3 sm:mr-[1vw] p-1 sm:p-[0.14vw] bg-[#F5F5FF] rounded-md border border-[#D9D8FD] w-8 h-8 sm:w-[1.81vw] sm:h-[1.81vw] flex items-center justify-center">
                   <FolderHeart
-                    className="w-[1.11vw] h-[1.11vw]"
+                    className="w-5 h-5 sm:w-[1.11vw] sm:h-[1.11vw]"
                     color="#5755FF"
                     strokeWidth={1.5}
                   />
                 </div>
-                <h3 className="font-manrope text-[1.67vw] font-[500] text-[#101928]">
+                <h3 className="font-manrope text-2xl sm:text-[1.67vw] font-[500] text-[#101928]">
                   Professional
                 </h3>
               </div>
-              {/* Dotted underline */}
-              <div className="w-full h-[0.07vw] border-t border-dashed border-gray-200 mb-[1.11vw]"></div>
-              <p className="font-manrope text-[2.22vw] font-[600] text-[#101928] mb-[0.83vw]">
+8:15
+<div className="w-full h-[1px] sm:h-[0.07vw] border-t border-dashed border-gray-200 mb-4 sm:mb-[1.11vw]"></div>
+              <p className="font-manrope text-3xl sm:text-[2.22vw] font-[600] text-[#101928] mb-2 sm:mb-[0.83vw]">
                 $499/month
               </p>
-              <p className="font-manrope text-[1.11vw] text-[#667185] mb-[3.33vw]">
+              <p className="font-manrope text-base sm:text-[1.11vw] text-[#667185] mb-6 sm:mb-[3.33vw]">
                 Great for medium-sized businesses seeking more
-                <br />
+                <br className="hidden sm:block" />
                 customization and features
               </p>
-              <ul className="space-y-[2.4vw] mb-[3.33vw]">
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+              <ul className="space-y-4 sm:space-y-[2.4vw] mb-6 sm:mb-[3.33vw]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   Upto 1,000 Support Responses per month
                 </li>
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   50,000 contacts storage
                 </li>
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   10 custom instructions
                 </li>
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   5 AI Chatbots
                 </li>
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   5 team members
                 </li>
-                <li className="flex items-center font-manrope text-[1.11vw] text-[#101928]">
+                <li className="flex items-center font-manrope text-base sm:text-[1.11vw] text-[#101928]">
                   <CircleCheck
-                    className="w-[1.39vw] h-[1.39vw] text-[#12B76A] mr-[0.56vw]"
+                    className="w-5 h-5 sm:w-[1.39vw] sm:h-[1.39vw] text-[#12B76A] mr-2 sm:mr-[0.56vw]"
                     strokeWidth={1.5}
                   />
                   API Access (Rate limit)
                 </li>
               </ul>
               <Button
-                variant="primary"
-                size="custom"
-                className="w-full sm:w-[13.89vw] h-[3.47vw] flex items-center justify-between !p-0 px-[1.11vw]"
-                onClick={() => window.open("https://app.bot9.ai/signup")}
-              >
-                <span className="whitespace-nowrap font-manrope text-[1.11vw] font-[600] ml-[1.11vw]">
-                  Get Professional
-                </span>
-                <ArrowRight className="w-[3.39vw] h-[1.39vw]"/>
-              </Button>
+              variant="primary"
+              size="custom"
+              className="w-1/2 sm:w-[13.89vw] h-12 sm:h-[3.47vw] flex items-center justify-between !p-0 px-4 sm:px-[1.11vw]"
+              onClick={() => window.open("https://app.bot9.ai/signup")}
+            >
+              <span className="whitespace-nowrap font-manrope text-sm sm:text-[1.11vw] font-[600] ml-2 sm:ml-[1.11vw]">
+                Get Professional
+              </span>
+              <ArrowRight className="w-4 h-4 sm:w-[1.39vw] sm:h-[1.39vw] mr-[0.5rem] sm:mr-[0.8vw]"/>
+            </Button>
             </div>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 640px) {
+          .bg-white {
+            box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+          }
+        }
+      `}</style>
     </section>
   );
 };
 
 export default Hero;
-
-
-
