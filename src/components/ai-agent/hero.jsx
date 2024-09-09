@@ -180,10 +180,10 @@ const Hero = () => {
         </>
       )}
 
-      <div className={`relative w-full max-w-[100vw] mx-auto pt-[10vw] pb-[1.94vw] px-[0.28vw] ${isMobile ? 'pt-20 pb-4 px-4' : ''}`}>
+      <div className={`relative w-full max-w-[100vw]  mx-auto pt-[10vw] pb-[1.94vw] px-[0.28vw] ${isMobile ? 'pb-4 px-4 mt-8' : ''}`}>
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center">
-          <h1 className={`font-manrope text-[#101828] mb-[1.67vw] max-w-[52.08vw] text-center ${isMobile ? 'text-3xl font-bold leading-tight mb-4 max-w-full' : 'text-[3.89vw] font-[500] leading-[5vw]'}`}>
+          <h1 className={`font-manrope text-[#101828] mb-[1.67vw] max-w-[52.08vw] text-center ${isMobile ? 'text-3xl font-semibold leading-tight mb-4 max-w-full' : 'text-[3.89vw] font-[500] leading-[5vw]'}`}>
             Empower Your Business
             <br />
             with Next-<span className="text-[#5755FF]">Gen AI Agents</span>
